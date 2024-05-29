@@ -92,8 +92,21 @@ This comprehensive guide will walk you through creating a robust, scalable Windo
    - Create a local user (e.g., `user`).
 
 ### Step 9: Join the Client to the Domain
-1. Log in to the `Client1` VM.
-2. Open System settings, click `Rename this PC (Advanced)`, and join the domain (e.g., `mydomain.com`).
+1. Log in to the `Client1` VM and check for connection
+   
+![Client Connection](/Assets/client_network.png)
+
+2. Open System settings, click `Rename this PC (Advanced)`, and choose `Change` in `To rename this computer or change its domain or workgroup, click Change`.
+   - Computer Name: `CLIENT1`
+   - Member of Domain: `mydomain.com`
+   - Using Admin Account for permission
+
+![IP Address Range](/Assets/client_domain.png)
+
+**Successfully Connect to mydomain.com domain**
+
+![IP Address Range](/Assets/client_domain_complete.png)
+
 3. Restart the VM and log in with a domain account.
 
 ## Troubleshooting
