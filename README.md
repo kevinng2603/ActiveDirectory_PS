@@ -4,7 +4,7 @@
 Welcome to the Active Directory Lab! This project is guided you through setting up and configuring an **Active Directory** environment using VirtualBox. You will not only set up the infrastructure but also dive into using **PowerShell** scripts to automate user creation. This setup is perfect for IT professionals, students, and enthusiasts looking to deepen their understanding of **Active Directory** and **Windows networking** in a hands-on, practical way.
 
 ## Prerequisites
-Before you proceed, ensure you have completed the environment setup as described in the [Environment Setup Guide](environment-setup.md).
+Before you proceed, ensure you have completed the environment setup as described in the [Environment Setup Guide](/Docs/environment-setup.md).
 1. **Oracle VirtualBox**: [Download here](https://www.virtualbox.org/)
 2. **Windows 10 ISO**: [Download here](https://www.microsoft.com/software-download/windows10)
 3. **Windows Server 2019 ISO**: [Download here](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019)
@@ -73,6 +73,50 @@ Here is a screenshot showing a portion of the successfully deployed users:
 **Admin and User Account**
 
 ![User Deployment Success](/Assets/admin_users.png)
+
+### Step 4: Verify the Client Computer Joined to the Domain
+After successfully joining the client computer to the domain, you can verify this by checking the Address Leases and the presence of the client computer in Active Directory Users and Computers. Follow these steps:
+
+1. **Check the Address Leases in DHCP**:
+   - Open **DHCP** from the **Administrative Tools** menu on the Domain Controller.
+   - Navigate to your DHCP server and expand the node.
+   - Select **Address Leases** under the relevant scope.
+   - Verify that the `CLIENT1` computer appears in the list with an assigned IP address.
+
+Here is a screenshot showing `CLIENT1` in the Address Leases:
+
+![Client Computer Verification](/Assets/dc_client_dhcp.png)
+
+2. **Check in Active Directory Users and Computers**:
+   - Open **Active Directory Users and Computers** from the **Administrative Tools** menu.
+   - Expand the domain node.
+   - Navigate to the **Computers** container or the Organizational Unit where you expect the client computer to be.
+   - Verify that `CLIENT1` appears in the list of computers.
+
+Here is a screenshot showing `CLIENT1` in the Active Directory Users and Computers:
+
+![Client Computer Verification](/Assets/dc_client_ad.png)
+
+# Step 15: Log In to CLIENT1 Using a Domain Account
+
+After successfully joining the CLIENT1 computer to the domain, you can log in using one of the user accounts created with the PowerShell script. Follow these steps:
+
+**Log In Using a Domain Account**:
+   - Enter any domain credentials for one of the users created with the PowerShell script.
+     - Username: `sbeater`
+     - Password: The password you specified in the PowerShell script `Password1`.
+
+<p align="left">
+  <img src="/Assets/client_login.png" alt="Login Verification" width="600"/>
+</p>
+
+3. **Verify Successful Login**:
+   - After entering the credentials, press Enter.
+   - Ensure that you successfully log in to the CLIENT1 VM using the domain account.
+
+Here is a screenshot showing the successful login using a domain account:
+
+![Login Verification](/Assets/client_complete.png)
 
 ## Conclusion
 - By following these steps, you will have a fully functional Active Directory lab environment. This setup provides a valuable opportunity to gain hands-on experience with Windows networking and Active Directory. Additionally, by leveraging PowerShell script automation to add bulk users, you can efficiently manage and streamline the process of user creation in Active Directory, making it an essential skill for IT professionals and system administrators.
