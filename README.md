@@ -5,10 +5,11 @@ Welcome to the Active Directory Lab! This project is guided you through setting 
 
 ## Prerequisites
 Before you proceed, ensure you have completed the environment setup as described in the [Environment Setup Guide](/Docs/environment-setup.md).
-1. **Oracle VirtualBox**: [Download here](https://www.virtualbox.org/)
-2. **Windows 10 ISO**: [Download here](https://www.microsoft.com/software-download/windows10)
-3. **Windows Server 2019 ISO**: [Download here](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019)
-4. **VirtualBox Extension Pack**: [Download here](https://www.virtualbox.org/wiki/Downloads)
+1. **PowerShell Scripts**: [Scripts Folder](/Scripts)
+2. **Oracle VirtualBox**: [Download here](https://www.virtualbox.org/)
+3. **Windows 10 ISO**: [Download here](https://www.microsoft.com/software-download/windows10)
+4. **Windows Server 2019 ISO**: [Download here](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019)
+5. **VirtualBox Extension Pack**: [Download here](https://www.virtualbox.org/wiki/Downloads)
 
 ## Network Diagram
 
